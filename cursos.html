@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisiones</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        header {
+            background-color:  #ff669d; /* Color de fondo del encabezado */
+            color: white; /* Color del texto del encabezado */
+            padding: 20px; /* Espaciado interno del encabezado */
+            text-align: center; /* Alineación centrada */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        footer {
+            background-color:  #ff669d; /* Color de fondo del pie de página */
+            color: white; /* Color del texto del pie de página */
+            padding: 10px 20px; /* Espaciado interno del pie de página */
+            text-align: center; /* Alineación centrada */
+        }
+        footer h3 {
+            margin-top: 0;
+            margin-bottom: 10px; /* Espacio inferior */
+            font-size: 24px;
+        }
+        footer p {
+            margin-bottom: 10px; /* Espacio inferior */
+        }
+        .redes-sociales a {
+            color: white; /* Color de los iconos */
+            margin: 0 10px; /* Espacio horizontal entre iconos */
+            font-size: 24px; /* Tamaño del icono */
+            transition: color 0.3s; /* Transición suave del color */
+        }
+        .redes-sociales a:hover {
+            text-decoration: underline; /* Subrayado al pasar el mouse */
+        }
+        .highlight {
+            font-family: 'Permanent Marker', cursive; /* Cambiar la fuente */
+            font-size: 30px; /* Tamaño de fuente más grande */
+            background-color:  #ff669d; /* Color de fondo del pie de página */
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+         .menu-container {
+            background-color: #ff669d; /* Color de fondo del pie de página */
+            padding: 10px 0; /* Espaciado interno */
+            text-align: center;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            flex: 1; /* Para que ocupe todo el espacio disponible verticalmente */
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+   .course {
+            margin: 10px;
+            text-align: center;
+            width: calc(20% - 20px); /* Ancho fijo para cada curso, restando el margen */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            color: white; /* Color del texto */
+        }
+
+        .autocuidado { background-color: #ff7f50; } /* Ejemplo de color para un tema específico */
+        .derechos-humanos { background-color: #87ceeb; } /* Otro ejemplo de color */
+        .prevencion-suicidio { background-color: #90ee90; }
+        .primeros-auxilios { background-color: #ff6347; }
+        .demencia { background-color: #dda0dd; }
+        .estigma { background-color: #ffb6c1; }
+        .mhgap { background-color: #4682b4; }
+        .supervision-clinica { background-color: #8a2be2; }
+        .calidad-derechos { background-color: #ff69b4; }
+        .apoyo-psicosocial { background-color: #00ced1; }
+
+        .course img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .course h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .course p {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .course a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .course a:hover {
+            color: black;
+        }
+   /* Estilos para las categorías */
+        .categorias {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            z-index: 1;
+        }
+        .categorias ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .categorias ul li {
+            margin-bottom: 5px;
+        }
+        .categorias ul li a {
+            color: black;
+            text-decoration: none;
+
+    </style>
+</head>
+<body>
+   <ul class="menu">
+        <center><div class="highlight">EUDAIMONIA</div></center>
+        <div class="menu-container">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="que hacemos.html">Qué hacemos</a></li>
+ <li><a href="conocenos.html">Conocenos</a></li>
+            <li><a href="cursos.html">Cursos y Talleres</a></li>
+            <li>
+                <a href="#" class="multimedia-link">Multimedia</a>
+                <div class="categorias" style="display: none;">
+                    <ul>
+                        <li><a href="libros.html">Libros</a></li>
+                        <li><a href="videos.html">Videos</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="prueba.html">Cómo ayudar</a></li>
+            <li><a href="ubicacion.html">Ubicación</a></li>
+        </div>
+    </ul>
+    <div class="container">
+        <div class="course autocuidado">
+            <div class="course-content">
+                <img src="https://www.paho.org/sites/default/files/styles/large/public/banner_autocuidado_1.png?itok=Qf5IfjqS" alt="Curso 1">
+                <div>
+                    <h2>Autocuidado para personal en primera línea de respuesta en emergencias</h2>
+                    <p>Este curso brindará conocimiento y estrategias para la identificación y el manejo del estrés asociado al entorno laboral y aportará recursos y prácticas para el autocuidado del personal en primera línea de respuesta en emergencias.</p>
+                    <p>Duración: 7HS</p>
+                    <a href="https://campus.paho.org/es/curso/autocuidado-para-personal-en-primera-linea-de-respuesta-en-situaciones-de-emergencia-en" target="_blank">ACCEDA AL CURSO</a>
+                </div>
+            </div>
+        </div>
+        <!-- Aquí van los otros cursos -->
+        <!-- Copia y pega el bloque de curso siguiente tantas veces como desees -->
+        <div class="course derechos-humanos">
+            <div class="course-content">
+                <img src="https://www.paho.org/sites/default/files/styles/large/public/protection_and_promotion_of_human_rights_in_mental_health_and_psychosocial_support_in_emergencies_0.jpg?itok=pXphcw6k" alt="Curso 2">
+                <div>
+                    <h2>Protección y promoción de los derechos humanos en la respuesta en salud mental y apoyo psicosocial en emergencias</h2>
+                    <p>Este curso tiene como objetivo presentar los principios y herramientas para promover un enfoque de calidad y basado en derechos para la respuesta MHPSS en emergencias y desastres humanitarios.</p>
+                    <p>Duración: 7HS</p>
+                    <a href="https://campus.paho.org/es/curso/proteccion-y-promocion-de-los-derechos-humanos-en-la-respuesta-en-salud-mental-y-apoyo" target="_blank">ACCEDA AL CURSO</a>
+                </div>
+            </div>
+        </div>
+        <div class="course prevencion-suicidio">
+            <div class="course-content">
+                <img src="https://www.paho.org/sites/default/files/styles/large/public/curso_suicidio_cover-esp_3.jpg?itok=a_brq9Fl" alt="Curso 3">
+                <div>
+                    <h2>Prevención de la autolesión y el suicidio: empoderamiento de los profesionales de atención primaria de salud</h2>
+                    <p>Curso de autoaprendizaje diseñado para profesionales de atención primaria, brindando conocimientos y herramientas para la identificación y manejo de personas en riesgo de suicidio.</p>
+                    <p>Duración: 7HS</p>
+                    <a href="https://campus.paho.org/es/curso/prevencion-de-la-autolesion-y-el-suicidio-empoderamiento-de-los-profesionales-de-atencion" target="_blank">ACCEDA AL CURSO</a>
+                </div>
+            </div>
+        </div>
+        <div class="course primeros-auxilios">
+            <div class="course-content">
+                <img src="https://www.paho.org/sites/default/files/styles/large/public/banner-460x250_1.png?itok=Pb6zH115" alt="Curso 4">
+                <div>
+                    <h2>Primeros auxilios psicológicos</h2>
+                    <p>Curso que brinda conocimientos básicos sobre la identificación de necesidades de salud mental y apoyo psicosocial en situaciones de emergencia y desastres.</p>
+                    <p>Duración: 7HS</p>
+                    <a href="https://campus.paho.org/es/curso/primera-ayuda-psicologica-pap-en-el-manejo-de-emergencias-2020" target="_blank">ACCEDA AL CURSO</a>
+                </div>
+            </div>
+        </div>
+        <div class="course demencia">
+            <div class="course-content">
+                <img src="https://campus.paho.org/sites/default/files/nmh-mh_isupport-cuidadoresdemencia-esp-2022.jpg" alt="Curso 5">
+                <div>
+                    <h2>Demencia: Un enfoque basado en la comunidad</h2>
+                    <p>Curso que proporciona una comprensión integral de la demencia y promueve un enfoque comunitario para su manejo.</p>
+                    <p>Duración: 7HS</p>
+                    <a href="https://campus.paho.org/es/curso/isupport-capacitacion_demencia" target="_blank">ACCEDA AL CURSO</a>
+                </div>
+            </div>
+        </div>
+        <div class="course estigma">
+            <div class="course-content">
+                <img src="https://campus.paho.org/sites/default/files/nmh-mh-estigma-esp-2022.jpg" alt="Curso 6">
+                <div>
+                    <h2>Combatir el estigma relacionado con la salud mental</h2>
+                    <p>Curso que busca sensibilizar y educar sobre la importancia de combatir el estigma y la discriminación hacia las personas con trastornos mentales.</p>
+                    <p>Duración: 7HS</p>
+                    <a href="https://campus.paho.org/sites/default/files/nmh-mh-estigma-esp-2022.jpg" target="_blank">ACCEDA AL CURSO</a>
+                </div>
+            </div>
+        </div>
+        <div class="course mhgap">
+            <div class="course-content">
+                <img src="https://campus.paho.org/sites/default/files/nmh-nv-diagnostcancerpediatrico_esp-2021__0.jpg" alt="Curso 7">
+                <div>
+                    <h2>Intervenciones mhGAP: Curso de autoaprendizaje</h2>
+                    <p>Curso diseñado para capacitar a los profesionales de salud en la implementación de intervenciones clave en salud mental, neurológicas y por abuso de sustancias.</p>
+                    <p>Duración: 7HS</p>
+                    <a href="https://campus.paho.org/es/curso/curso-virtual-mhgap-humanitario-2020" target="_blank">ACCEDA AL CURSO</a>
+                </div>
+            </div>
+        </div>
+        <div class="course supervision-clinica">
+            <div class="course-content">
+                <img src="https://campus.paho.org/sites/default/files/343-nmh-mh-supervisclinica-pnal-sm-2022.jpg" alt="Curso 8">
+                <div>
+                    <h2>Supervisión Clínica en el ámbito de la salud mental y apoyo psicosocial</h2>
+                    <p>Curso que ofrece herramientas y conocimientos sobre la importancia de la supervisión clínica en el ámbito de la salud mental y apoyo psicosocial.</p>
+                    <p>Duración: 7HS</p>
+                    <a href="https://campus.paho.org/es/node/43203" target="_blank">ACCEDA AL CURSO</a>
+                </div>
+            </div>
+        </div>
+        <div class="course calidad-derechos">
+            <div class="course-content">
+                <img src="https://www.paho.org/sites/default/files/styles/large/public/who_qualityrights_e-training_on_mental_health_0.png?itok=NvZ8U20v" alt="Curso 9">
+                <div>
+                    <h2>Calidad y Derechos en Salud Mental</h2>
+                    <p>Curso que proporciona un enfoque basado en derechos humanos para la atención de salud mental y apoyo psicosocial.</p>
+                    <p>Duración: 7HS</p>
+                    <a href="https://www.paho.org/es/entrenamiento-virtual-instrumento-calidad-derechos-qualityrights-oms" target="_blank">ACCEDA AL CURSO</a>
+                </div>
+            </div>
+        </div>
+        <div class="course apoyo-psicosocial">
+            <div class="course-content">
+                <img src="https://www.paho.org/sites/default/files/styles/large/public/mhpss-emergencies-course_0.jpg?itok=RlYQrhQS" alt="Curso 10">
+                <div>
+                    <h2>Apoyo psicosocial en emergencias y desastres</h2>
+                    <p>Curso que proporciona conocimientos y herramientas para brindar apoyo psicosocial efectivo en situaciones de emergencia y desastres.</p>
+                    <p>Duración: 7HS</p>
+                    <a href="https://openwho.org/courses/salud-mental-y-apoyo-psicosocial-en-emergencias" target="_blank">ACCEDA AL CURSO</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="redes-sociales">
+             <a href="https://www.facebook.com/profile.php?id=61560511971163&mibextid=ZbWKwL"  target="_blank"><i class="fab fa-facebook"></i></a>
+                   <a href="https://twitter.com/kariihernd" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/liizhernd" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Pie de página <br> EUDAIMONIA</p>
+
+    </footer>
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var multimediaLink = document.querySelector('.multimedia-link');
+            var categorias = document.querySelector('.categorias');
+
+            multimediaLink.addEventListener('click', function() {
+                if (categorias.style.display === "none" || categorias.style.display === "") {
+                    categorias.style.display = "block";
+                } else {
+                    categorias.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+

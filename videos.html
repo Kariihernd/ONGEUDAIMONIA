@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Videos</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        footer {
+              background-color:  #ff669d; /* Color de fondo del pie de página */
+            color: white; /* Color del texto del pie de página */
+            padding: 10px 20px; /* Espaciado interno del pie de página */
+            text-align: center; /* Alineación centrada */
+        }
+        footer p {
+            margin-bottom: 10px; /* Espacio inferior */
+        }
+        .redes-sociales a {
+            color: white; /* Color de los iconos */
+            margin: 0 10px; /* Espacio horizontal entre iconos */
+            font-size: 24px; /* Tamaño del icono */
+            transition: color 0.3s; /* Transición suave del color */
+        }
+        .redes-sociales a:hover {
+              text-decoration: underline; /* Cambiar color al pasar el mouse */
+        }
+        .highlight {
+            font-family: 'Permanent Marker', cursive; /* Cambiar la fuente */
+            font-size: 30px; /* Tamaño de fuente más grande */
+                background-color:  #ff669d; /* Color de fondo del pie de página */
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-container {
+             background-color:  #ff669d; /* Color de fondo del pie de página */
+            padding: 10px 0; /* Espaciado interno */
+            text-align: center;
+        }
+
+       .menu { 
+            background-color:  #ff669d; /* Color de fondo del pie de página */
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            display: block; /* Hacer que el enlace ocupe todo el ancho del contenedor */
+            padding: 10px; /* Agregar espacio interno */
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            flex: 1; /* Para que ocupe todo el espacio disponible verticalmente */
+        }
+
+        .left, .right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .right {
+            background-color: white; /* Fondo blanco */
+        }
+
+        .left p {
+            color: black; /* Color negro */
+            font-size: 35px; /* Tamaño de fuente más grande */
+            margin-bottom: 20px; /* Espacio inferior */
+        }
+
+        /* Estilos para las categorías */
+        .categorias {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            z-index: 1;
+        }
+
+        .categorias ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .categorias ul li {
+            margin-bottom: 5px;
+        }
+
+        .categorias ul li a {
+            color: black;
+            text-decoration: none;
+        }
+  .video-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas por fila */
+    gap: 20px;
+}
+
+.video {
+    width: calc((100% - 60px) / 4); /* Ancho del contenedor de video (resta el espacio entre los videos) */
+    margin-right: 20px; /* Espacio entre los videos */
+}
+
+/* Elimina el margen derecho del último video en cada fila */
+.video:nth-child(4n) {
+    margin-right: 0;
+}
+
+
+    </style>
+</head>
+<body>  <ul class="menu">
+        <center><div class="highlight">EUDAIMONIA</div></center>
+        <div class="menu-container">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="que hacemos.html">Qué hacemos</a></li>
+ <li><a href="conocenos.html">Conocenos</a></li>
+            <li><a href="cursos.html">Cursos y Talleres</a></li>
+            <li>
+                <a href="#" class="multimedia-link">Multimedia</a>
+                <div class="categorias" style="display: none;">
+                    <ul>
+                        <li><a href="libros.html">Libros</a></li>
+                        <li><a href="videos.html">Videos</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="prueba.html">Cómo ayudar</a></li>
+            <li><a href="ubicacion.html">Ubicación</a></li>
+        </div>
+    </ul>
+    <div class="container">
+        <div class="left">
+            <div class="video-gallery">
+                <div class="video">
+                    <iframe width="320" height="180" src="https://www.youtube.com/embed/https://youtu.be/e7huSuF-gRE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <iframe width="320" height="180" src="https://www.youtube.com/embed/WIb4B79B9zQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+ <div class="video">
+                    <iframe width="320" height="180" src="https://www.youtube.com/embed/S1g1cQjUguI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+<BR>
+ <div class="video">
+                    <iframe width="320" height="180" src="https://www.youtube.com/embed/5jqWuEPe47E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+ <div class="video">
+                    <iframe width="320" height="180" src="https://www.youtube.com/embed/Vf7N6ADsmKg?t=153" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+ <div class="video">
+                    <iframe width="320" height="180" src="https://www.youtube.com/embed/WvI3tnank04?t=3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+ <div class="video">
+                    <iframe width="320" height="180" src="https://www.youtube.com/embed/yT01CAWDtGM?t=2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div> <div class="video">
+                    <iframe width="320" height="180" src="https://www.youtube.com/embed/ry7mu4UCzPU?t=3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+ <div class="video">
+                    <iframe width="320" height="180" src="https://www.youtube.com/embed/cxG50TuyM4E?t=6" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+ <div class="video">
+                    <iframe width="320" height="180" src="https://www.youtube.com/embed/Eb7QHKhdJF4?t=5" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+ <div class="video">
+                    <iframe width="320" height="180" src="https://www.youtube.com/embed/fmdS0GBVOZA?t=45" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+ <div class="video">
+                    <iframe width="320" height="180" src="https://www.youtube.com/embed/HwSz2MGZUoo?t=11" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <!-- Agrega más videos según sea necesario -->
+            </div>
+        </div>
+        <div class="right">
+            <!-- Contenido adicional aquí -->
+        </div>
+    </div>
+    <footer>
+        <p>Síguenos en nuestras redes sociales:</p>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/profile.php?id=61560511971163&mibextid=ZbWKwL"  target="_blank"><i class="fab fa-facebook"></i></a>
+                   <a href="https://twitter.com/kariihernd" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/liizhernd" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Galería de Videos - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+         document.addEventListener("DOMContentLoaded", function() {
+            var multimediaLink = document.querySelector('.multimedia-link');
+            var categorias = document.querySelector('.categorias');
+
+            multimediaLink.addEventListener('click', function() {
+                if (categorias.style.display === "none" || categorias.style.display === "") {
+                    categorias.style.display = "block";
+                } else {
+                    categorias.style.display = "none";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

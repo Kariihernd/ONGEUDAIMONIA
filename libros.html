@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisiones</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        footer {
+              background-color:  #ff669d; /* Color de fondo del pie de página */
+            color: white; /* Color del texto del pie de página */
+            padding: 10px 20px; /* Espaciado interno del pie de página */
+            text-align: center; /* Alineación centrada */
+        }
+        footer p {
+            margin-bottom: 10px; /* Espacio inferior */
+        }
+        .redes-sociales a {
+            color: white; /* Color de los iconos */
+            margin: 0 10px; /* Espacio horizontal entre iconos */
+            font-size: 24px; /* Tamaño del icono */
+            transition: color 0.3s; /* Transición suave del color */
+        }
+        .redes-sociales a:hover {
+              text-decoration: underline;/* Cambiar color al pasar el mouse */
+        }
+        .highlight {
+            font-family: 'Permanent Marker', cursive; /* Cambiar la fuente */
+            font-size: 30px; /* Tamaño de fuente más grande */
+             background-color:  #ff669d; /* Color de fondo del pie de página */
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-container {
+            background-color:  #ff669d; /* Color de fondo del pie de página */
+            padding: 10px 0; /* Espaciado interno */
+            text-align: center;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            flex: 1; /* Para que ocupe todo el espacio disponible verticalmente */
+        }
+
+        .left, .right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+      
+        
+
+        .right {
+            background-color: white; /* Fondo blanco */
+        }
+
+        .left p {
+            color: black; /* Color negro */
+            font-size: 35px; /* Tamaño de fuente más grande */
+            margin-bottom: 20px; /* Espacio inferior */
+        }
+
+        /* Estilos para las categorías */
+        .categorias {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            z-index: 1;
+        }
+
+        .categorias ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .categorias ul li {
+            margin-bottom: 5px;
+        }
+
+        .categorias ul li a {
+            color: black;
+            text-decoration: none;
+        }
+ bodys {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+       .books-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Espacio entre los contenedores */
+            max-width: 1200px; /* Ancho máximo ajustado */
+            margin: 0 auto; /* Centrar los contenedores */
+        }
+
+        .book-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: calc(25% - 20px); /* Ancho del contenedor ajustado */
+            max-width: 400px;
+        }
+
+        .book-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .book-title {
+            font-size: 24px;
+            margin: 15px 0 5px;
+        }
+        .book-subtitle {
+            font-size: 18px;
+            color: #555;
+            margin: 5px 0 15px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .button.read {
+            background-color: #007bff;
+            color: white;
+        }
+        .button.read:hover {
+            background-color: #0056b3;
+        }
+        .button.download {
+            background-color: transparent;
+            color: #007bff;
+            border: 2px solid #007bff;
+        }
+        .button.download:hover {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <center><div class="highlight">EUDAIMONIA</div></center>
+        <div class="menu-container">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="que hacemos.html">Qué hacemos</a></li>
+ <li><a href="conocenos.html">Conocenos</a></li>
+            <li><a href="cursos.html">Cursos y Talleres</a></li>
+            <li>
+                <a href="#" class="multimedia-link">Multimedia</a>
+                <div class="categorias" style="display: none;">
+                    <ul>
+                        <li><a href="libros.html">Libros</a></li>
+                        <li><a href="videos.html">Videos</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="prueba.html">Cómo ayudar</a></li>
+            <li><a href="ubicacion.html">Ubicación</a></li>
+        </div>
+    </ul>
+    <div class="container">
+        <div class="left">
+       
+        </div>
+        <div class="right">
+            <!-- Contenido adicional aquí -->
+        </div>
+    </div>
+<body>
+    <div class="books-wrapper">
+        <!-- Primer libro -->
+        <div class="book-container">
+            <img src="https://m.media-amazon.com/images/I/31Xvo0HpaGL.jpg" alt="Portada del Libro" class="book-image">
+            <h1 class="book-title">Una vida sin salud mental</h1>
+            <h2 class="book-subtitle">Alba Gonzalez</h2>
+            <div class="button-container">
+                <a href="https://drive.google.com/file/d/1iRb5G2asfltq-kr52CL1Ck7RckZKZfSb/view" download class="button download">Descargar</a>
+            </div>
+        </div>
+        <!-- Repite el mismo contenedor para cada libro -->
+<div class="book-container">
+            <img src="https://m.media-amazon.com/images/I/41F3HUhvCkL.jpg" alt="Portada del Libro" class="book-image">
+            <h1 class="book-title">El fin de la ansiedad</h1>
+            <h2 class="book-subtitle">Gio Zararri</h2>
+            <div class="button-container">
+                <a href="https://drive.google.com/file/d/1za4yPGUEmhQS9Aynno0AoUGqOhgc72ik/view" download class="button download">Descargar</a>
+            </div>
+        </div>
+<div class="book-container">
+            <img src="https://consaludmental.org/wp-content/uploads/2016/10/ponte-en-mi-lugar-209x300-e1471352623281.jpg" alt="Portada del Libro" class="book-image">
+            <h1 class="book-title">Ponte en mi lugar</h1>
+            <h2 class="book-subtitle">Editorial Grupo</h2>
+            <div class="button-container">
+                <a href="https://drive.google.com/file/d/1F8ZcxJJoE_P9_udzvYh0mE1l0ksPV2_N/view" download class="button download">Descargar</a>
+            </div>
+        </div>
+<div class="book-container">
+            <img src="https://s3proxy.cdn-zlib.se/covers1000/collections/genesis/8a349489fec8854ed40410d16267643712dcfa3d17511757602a5c3a2bfad2de.jpg" alt="Portada del Libro" class="book-image">
+            <h1 class="book-title">Morir antes del suicidio</h1>
+            <h2 class="book-subtitle">Francisco Villar Cabeza</h2>
+            <div class="button-container">
+                <a href="https://drive.google.com/file/d/1aZu0E-HsNdTrFi_9ttSuTVGc4gqGAiB9/view" download class="button download">Descargar</a>
+            </div>
+        </div>
+<div class="book-container">
+            <img src="https://imgv2-2-f.scribdassets.com/img/document/637089583/original/2772321bac/1716838306?v=1" alt="Portada del Libro" class="book-image">
+            <h1 class="book-title">Dialogo entre el principito y un psicologo</h1>
+            <h2 class="book-subtitle"> Martín Berasain </h2>
+            <div class="button-container">
+                <a href="https://drive.google.com/file/d/1N9EIPI4pkdhuz934nO6uZnlly1kVPJnZ/view" download class="button download">Descargar</a>
+            </div>
+        </div>
+<div class="book-container">
+            <img src="https://www.metromedia.hn/web/image/product.template/273392/image" alt="Portada del Libro" class="book-image">
+            <h1 class="book-title">¿Puedo hablar de mi salud mental?</h1>
+            <h2 class="book-subtitle"> Beatriz Cepeda y Enrique Aparicio</h2>
+            <div class="button-container">
+                <a href="https://drive.google.com/file/d/1ToT6HIuy4wLKW5_ttfUPiq1OdwoGUmPc/view" download class="button download">Descargar</a>
+            </div>
+        </div>
+<div class="book-container">
+            <img src="https://m.media-amazon.com/images/I/41dfUNmT3UL.jpg" alt="Portada del Libro" class="book-image">
+            <h1 class="book-title">Abraza a la niña que fuiste Sana las heridas del pasado y reconecta con tu interior</h1>
+            <h2 class="book-subtitle"> Marta Segrelles</h2>
+            <div class="button-container">
+                <a href="https://drive.google.com/file/d/13Y1YSysDwwfC57hxleB2iK84H-V6gw3l/view" download class="button download">Descargar</a>
+            </div>
+        </div>
+<div class="book-container">
+            <img src="https://m.media-amazon.com/images/I/71o6zW864VS._AC_UF1000,1000_QL80_.jpg" alt="Portada del Libro" class="book-image">
+            <h1 class="book-title">Deja de pensar demasiado</h1>
+            <h2 class="book-subtitle"> Nick Trenton</h2>
+            <div class="button-container">
+                <a href="https://drive.google.com/file/d/1VyXIWe-rhaLKIiyDulzF57MRBOIVkA-f/view" download class="button download">Descargar</a>
+            </div>
+        </div>
+<div class="book-container">
+            <img src="https://m.media-amazon.com/images/I/81P3o21rvlL._AC_UF1000,1000_QL80_.jpg" alt="Portada del Libro" class="book-image">
+            <h1 class="book-title">La autolesion el lenguaje del dolor</h1>
+            <h2 class="book-subtitle">Dolores Mosquera </h2>
+            <div class="button-container">
+                <a href="https://drive.google.com/file/d/1DZic4PlcMt5Aci-QegnjAjwwVV2AJz6l/view" download class="button download">Descargar</a>
+            </div>
+        </div>
+<div class="book-container">
+            <img src="https://www.mrbooks.com/mrbooks/portadas/9789585266322.webp" alt="Portada del Libro" class="book-image">
+            <h1 class="book-title"> La depresión (no) existe Guía para no causar daño cuando hables con una persona deprimida</h1>
+            <h2 class="book-subtitle"> Juan Carlos Rincón Escalante </h2>
+            <div class="button-container">
+                <a href="https://drive.google.com/file/d/1HX7GeXMMUtxa9sCd3TmZ3Hwg1uHTwak_/view" download class="button download">Descargar</a>
+            </div>
+        </div>
+<div class="book-container">
+            <img src="https://laninaamarilla.com/wp-content/uploads/2023/06/libro.jpg" alt="Portada del Libro" class="book-image">
+            <h1 class="book-title">La niña amarilla El libro de relatos suicidas desde el amor</h1>
+            <h2 class="book-subtitle"> María De Quesada</h2>
+            <div class="button-container">
+                <a href="https://drive.google.com/file/d/1BTK2p3N4ZwOCkUbHYl3KnhOKsrzg0Ofh/view" download class="button download">Descargar</a>
+            </div>
+        </div>
+<div class="book-container">
+            <img src="https://m.media-amazon.com/images/I/81128eyCurL._AC_UF1000,1000_QL80_.jpg" alt="Portada del Libro" class="book-image">
+            <h1 class="book-title">Nadie tiene que saberlo excepto tú</h1>
+            <h2 class="book-subtitle">Anni Vital Madame G. Roux</h2>
+            <div class="button-container">
+                <a href="https://drive.google.com/file/d/1nVJe03sX2Xq0yS48G3QkTtYgE3cinMQ1/view" download class="button download">Descargar</a>
+            </div>
+        </div>
+<div class="book-container">
+            <img src="https://m.media-amazon.com/images/I/81oEul4JVJL._AC_UF1000,1000_QL80_.jpg" alt="Portada del Libro" class="book-image">
+            <h1 class="book-title">Querido cerebro, ¿qué coño quieres de mí?</h1>
+            <h2 class="book-subtitle">Lorena Gascón</h2>
+            <div class="button-container">
+                <a href="https://drive.google.com/file/d/1GFkAfdiMEBRpSso8jaIcXAdrExEfY0IS/view" download class="button download">Descargar</a>
+            </div>
+        </div>
+<div class="book-container">
+            <img src="https://m.media-amazon.com/images/I/711NBQgkS9L._AC_UF894,1000_QL80_.jpg" alt="Portada del Libro" class="book-image">
+            <h1 class="book-title">Tu ansiedad bajo control</h1>
+            <h2 class="book-subtitle">Sergio García Morilla, Tais Pérez Domínguez</h2>
+            <div class="button-container">
+                <a href="https://drive.google.com/file/d/1rbF68YSXaqFVUVbkO-lMxLUYOkzLOCN_/view" download class="button download">Descargar</a>
+            </div>
+        </div>
+
+        <!-- Puedes copiar y pegar este bloque o generarlos dinámicamente con PHP o JavaScript -->
+    </div>
+</body>
+    <footer>
+        <p>Síguenos en nuestras redes sociales:</p>
+        <div class="redes-sociales">
+             <a href="https://www.facebook.com/profile.php?id=61560511971163&mibextid=ZbWKwL"  target="_blank"><i class="fab fa-facebook"></i></a>
+                   <a href="https://twitter.com/kariihernd" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/liizhernd" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Pie de página <br> EUDAIMONIA</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var multimediaLink = document.querySelector('.multimedia-link');
+            var categorias = document.querySelector('.categorias');
+
+            multimediaLink.addEventListener('click', function() {
+                if (categorias.style.display === "none" || categorias.style.display === "") {
+                    categorias.style.display = "block";
+                } else {
+                    categorias.style.display = "none";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+
